@@ -7,6 +7,8 @@ import os
 path_to_chromedriver = os.path.join(os.pardir, "chromedriver")
 driver = webdriver.Chrome(path_to_chromedriver) 
 
+XPATH_BASE_STRING = '//*[@id="incidentListTable"]/div/div/div[{}]/'
+
 dfs = []
 for year in range(2013, 2021): #current calfire website contains data starting from 2013 
     url = 'https://www.fire.ca.gov/incidents/{}/'.format(year)
@@ -24,12 +26,12 @@ for year in range(2013, 2021): #current calfire website contains data starting f
             break
         for row_num in range(2, 12): # row_num 1 is the header
             try:
-                name = driver.find_element_by_xpath('//*[@id="incidentListTable"]/div/div/div[{}]/div[1]'.format(row_num)).text
-                date = driver.find_element_by_xpath('//*[@id="incidentListTable"]/div/div/div[{}]/div[2]'.format(row_num)).text
-                county = driver.find_element_by_xpath('//*[@id="incidentListTable"]/div/div/div[{}]/div[3]'.format(row_num)).text
-                acres = driver.find_element_by_xpath('//*[@id="incidentListTable"]/div/div/div[{}]/div[4]'.format(row_num)).text
-                containment = driver.find_element_by_xpath('//*[@id="incidentListTable"]/div/div/div[{}]/div[5]'.format(row_num)).text
-                fires.append((name, date, county, acres, containment))
+                res []
+                for i in range(1, 6):
+                    # i = 1 - 5 corresponds to name, date, county, acres, containment
+                    element = driver.find_element_by_xpath('{}div[{}]/div[{}]'.format(XPATH_BASE_STRING, row_num, i)).text
+                    res.append(element)
+                fires.append(res)
             except NoSuchElementException as e:
                 print("Got all rows on this page")
                 break
