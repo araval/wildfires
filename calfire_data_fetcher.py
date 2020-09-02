@@ -3,8 +3,14 @@ from selenium.common.exceptions import NoSuchElementException
 import pandas as pd
 from datetime import datetime
 import os
+import logging
+import sys
+
+log_format = '%(asctime)s|%(levelname)s| %(message)s'
+logging.basicConfig(stream=sys.stdout, format=log_format, level=logging.INFO)
 
 DATE_STRING = datetime.today().strftime(format='%Y-%m-%d')
+
 
 class CalFire(object):
     def __init__(self):
@@ -38,31 +44,38 @@ class CalFire(object):
         page_number = 1
         while page_number:
             try:
-                page_button = driver.find_element_by_xpath('//*[@id="incidentListTable"]/div/nav/ul/li[{}]/a'.format(page_number))
+                xpath_to_page_button = '//*[@id="incidentListTable"]/div/nav/ul/li[{}]/a'.format(page_number)
+                page_button = driver.find_element_by_xpath(xpath_to_page_button)
                 page_button.click()
             except NoSuchElementException as e:
-                print("Completed all pages")
+                logging.debug(e)
+                logging.info("Completed all pages")
                 break
 
-            row_num = 2 # row_num 1 is the header
+            # We scan by row, and the fetch data in each column of the row
+            row_num = 2   # row_num 1 is the header
             while row_num:
                 try:
                     res = []
-                    for i in range(1, 6):
-                        # i = 1 - 5 corresponds to name, date, county, acres, containment
-                        element = driver.find_element_by_xpath('{}div[{}]/div[{}]'.format(xpath_base_string, row_num, i)).text
+                    for col_num in range(1, 6):
+                        # col_num = 1 - 5 corresponds to name, date, county, acres, containment
+                        xpath_to_element = '{}div[{}]/div[{}]'.format(xpath_base_string, row_num, col_num)
+                        element = driver.find_element_by_xpath(xpath_to_element)
+                        element = element.text
                         res.append(element)
                     fires.append(res)
                     row_num += 1
                 except NoSuchElementException as e:
-                    print("Got all rows on this page")
+                    logging.debug(e)
+                    logging.info("Got all rows on this page")
                     break
-            print("Completed page {}".format(page_number))
+            logging.info("Completed page {}".format(page_number))
             page_number += 1
 
         driver.quit()
         df = pd.DataFrame(fires, columns=['name', 'start_date', 'county', 'acres', 'containment'])
         return df
+
 
 if __name__ == '__main__':
 
