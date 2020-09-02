@@ -1,9 +1,16 @@
-from bs4 import BeautifulSoup
-import requests
-import pandas as pd
 from datetime import datetime
 
+import pandas as pd
+import requests
+from bs4 import BeautifulSoup
+from pandas.errors import OutOfBoundsDatetime
+
+
 def get_dataframe(year):
+    """
+    :param year: int. The year we want data for.
+    :return: Pandas dataframe
+    """
     url = "https://en.wikipedia.org/wiki/{}_California_wildfires".format(year)
     html_page = requests.get(url).text
     parsed_page = BeautifulSoup(html_page, "html.parser")  
@@ -27,30 +34,37 @@ def get_dataframe(year):
     df.columns = header
     return df
 
+
 def get_correct_table(tables):
+    """
+    Returns the correct table from various tables present in a wikipedia page based on header-content
+
+    :param tables: (list). List of tables
+    :return: table
+    """
     for table in tables:
         for t in table.contents:
 
             try:
                 header = t.find_all('tr')[0]
                 header = header.find_all('th')
-            except Exception as e:
+            except AttributeError:
                 continue
             try:
                 header = [name.get_text().strip() for name in header]
-            except Exception as e:
+            except Exception:
                 continue
             if len(header) > 1 and header[1] == 'County':
                 return header, table
+
 
 def get_fires(min_year, max_year):
     fires = []
     for year in range(min_year, max_year+1):
         df = get_dataframe(year)
         fires.append(df)
+    return clean_data(fires)
 
-    fire_df = clean_data(fires)
-    return fire_df
 
 def get_start_date(row):
     """
@@ -62,9 +76,10 @@ def get_start_date(row):
     date_string = '{}, {}'.format(day, row['year'])
     return pd.to_datetime(date_string)
 
+
 def get_end_date(row):
     """
-    Similar issues as start_date.
+    Similar issues as start_date (see function get_start_date)
     In addition, a fire can be active, in which case contained date is null. We will use
     today's date as 'contained_date'
     """
@@ -72,16 +87,25 @@ def get_end_date(row):
     date_string = '{}, {}'.format(day, row['year'])
     try:
         date = pd.to_datetime(date_string)
-    except Exception as e:
+    except OutOfBoundsDatetime:
         date = datetime.today().date()
     return date
 
+
 def clean_data(fires):
 
-    # rename columns to remove naming inconsistencies
-    # "contained_date" is listed as "Contained Date", "Contained date", "Containment date" etc.
-    # "start_date" is listed as "Start Date", "Start date" etc.
-    column_names = [] #collect names from all dfs
+    """
+    This does the following:
+    1. Rename columns to remove naming inconsistencies
+       "contained_date" is listed as "Contained Date", "Contained date", "Containment date" etc.
+       "start_date" is listed as "Start Date", "Start date" etc.
+    2. Delete columns "Ref" and "KM2" which are present in tables for some years, and not for others
+    3. Format date strings. Some years have year included in date and some do not
+    4. For active fires, set end-dates to today.
+
+    """
+    # Collect names from all dfs
+    column_names = []
     for df in fires:
         column_names += list(df.columns)
     col_map = {}
@@ -93,22 +117,23 @@ def clean_data(fires):
 
     for df in fires:
         df.rename(columns=col_map, inplace=True)
-        # remove columns. These are either redundant, or not available across all years
+        # Remove columns. These are either redundant, or not available across all years
         if 'Km2' in df.columns:
             df.drop('Km2', axis=1, inplace=True)
         if 'Ref' in df.columns:
             df.drop("Ref", axis=1, inplace=True)
 
-    fire_df = pd.concat(fires)
-    fire_df['start_date'] = fire_df.apply(get_start_date, axis=1)
-    fire_df['contained_date'] = fire_df.apply(get_end_date, axis=1) 
+    fires = pd.concat(fires)
+    fires['start_date'] = fires.apply(get_start_date, axis=1)
+    fires['contained_date'] = fires.apply(get_end_date, axis=1)
      
-    fire_df.columns = [colname.lower() for colname in fire_df.columns]
-    return fire_df
+    fires.columns = [colname.lower() for colname in fires.columns]
+    return fires
+
 
 if __name__ == '__main__':
     fire_df = get_fires(2002, 2020)
     now = datetime.now()
-    date_string = now.strftime(format='%Y-%m-%d')
+    date_string = now.strftime('%Y-%m-%d')
     filename = '{}_wiki_calfire_data.csv'.format(date_string)
     fire_df.to_csv(filename, index=None)
