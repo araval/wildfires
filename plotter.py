@@ -18,16 +18,16 @@ TODAY = TODAY.strftime("%Y-%m-%d")   # date-string to name files
 SAN_FRANCISCO_LAND_AREA = 30022.4   # acres
 
 
-def plot_annual_stats(fire_df):
+def plot_annual_stats(df):
     """
-    fire_df: Pandas dataframe 
+    df: Pandas dataframe
 
     Plots number of fires by year
     Plots total area burned by year
     Figures are saved in "images/<today>-annual-stats.png"
 
     """
-    df = fire_df.groupby('year', as_index=False).agg({'area_SF': ['sum', 'max', 'count']})
+    df = df.groupby('year', as_index=False).agg({'area_SF': ['sum', 'max', 'count']})
     df.columns = ['year', 'total_area_burned_SF', 'biggest_fire_area_SF', 'num_fires']
     f, a = plt.subplots(1, 2, figsize=(16, 5))
 
@@ -45,19 +45,19 @@ def plot_annual_stats(fire_df):
     plt.savefig(filename, bbox_inches='tight', dpi=150)
 
 
-def plot_monthly_stats(fire_df):
+def plot_monthly_stats(df):
     """
-    fire_df: Pandas dataframe 
+    df: Pandas dataframe
 
     Plots number of fires by calendar month
     Plots total area burned by calendar month
     Figures are saved in "images/<today>-monthly-stats.png"
 
     """
-    fire_df['start_date'] = pd.to_datetime(fire_df.start_date)
-    fire_df['month'] = fire_df.start_date.apply(lambda x: x.month)
-    monthly_df = fire_df.groupby('month', as_index=False).agg({'acres': ['sum', 'count', 'max'],
-                                                               'area_SF': ['sum', 'max']})
+    df['start_date'] = pd.to_datetime(df.start_date)
+    df['month'] = df.start_date.apply(lambda x: x.month)
+    monthly_df = df.groupby('month', as_index=False).agg({'acres': ['sum', 'count', 'max'],
+                                                          'area_SF': ['sum', 'max']})
     monthly_df.columns = ['month', 'total_area', 'num_fires', 'largest_fire_area', 'total_area_SF', 'largest_fire_SF']
     f, a = plt.subplots(1, 2, figsize=(16, 5))
     a[0].bar(monthly_df.month, monthly_df.total_area_SF, color='grey', alpha=0.5, label='total area burned')
@@ -74,16 +74,16 @@ def plot_monthly_stats(fire_df):
     plt.savefig(filename, bbox_inches='tight', dpi=150)
 
 
-def plot_county_stats(fire_df):
+def plot_county_stats(df):
     """
-    fire_df: Pandas dataframe
+    df: Pandas dataframe
 
     Plots number of fires and area burned by county starting from 2002 until present
     Figures saved in images/<TODAY>-county-num-fires.png
     """
 
     # calfire excludes county if there are multiple, sometimes
-    fire_df['county'].fillna('Multiple Counties', inplace=True) 
+    df['county'].fillna('Multiple Counties', inplace=True)
     
     # And sometimes, it includes all counties separated by commas, or 'and'
     def clean_county_name(name):
@@ -157,12 +157,12 @@ def process_dataframes(calfire, wikifire):
     calfire['notes'] = ''
     calfire['contained_date'] = None
 
-    fire_df = pd.concat([wikifire[wikifire.year < 2013], calfire])
+    all_fires = pd.concat([wikifire[wikifire.year < 2013], calfire])
 
     # Convert acres from string to int
-    fire_df.acres.fillna("", inplace=True)
-    fire_df['acres'] = fire_df.acres.apply(lambda x: int(re.sub(",", "", x)) if x != '' else 0)
-    fire_df["area_SF"] = fire_df['acres']/SAN_FRANCISCO_LAND_AREA
+    all_fires.acres.fillna("", inplace=True)
+    all_fires['acres'] = all_fires.acres.apply(lambda x: int(re.sub(",", "", x)) if x != '' else 0)
+    all_fires["area_SF"] = all_fires['acres']/SAN_FRANCISCO_LAND_AREA
 
     return fire_df
 
