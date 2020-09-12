@@ -16,6 +16,10 @@ SAN_FRANCISCO_LAND_AREA = 30022.4   # acres
 
 
 def get_latest_dataframe():
+    """
+    If there are files in data/ use the latest file (using dates in filenames)
+    If the data folder is empty, fetch fire data and proceed
+    """
 
     wiki_files = []
     calfire_files = []
@@ -80,6 +84,10 @@ if __name__ == '__main__':
     # All figures are saved in images/
     if not os.path.exists('images/'):
         os.mkdir('images')
+
+    # Save data in data/
+    if not os.path.exists('data/'):
+        os.mkdir('data')
 
     fire_df = get_latest_dataframe()
 
