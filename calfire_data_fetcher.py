@@ -39,6 +39,7 @@ class CalFire(object):
         filename = 'data/{}_calfire_data_{}-{}.csv'.format(DATE_STRING, start_year, end_year)
         fire_df.to_csv(filename, index=None)
         self.driver.quit()
+        return fire_df
 
     def _fetch_data(self, url):
         self.driver.get(url)
