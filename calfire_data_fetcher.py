@@ -5,6 +5,7 @@ from datetime import datetime
 import os
 import logging
 import sys
+import argparse
 
 log_format = '%(asctime)s|%(levelname)s| %(message)s'
 logging.basicConfig(stream=sys.stdout, format=log_format, level=logging.INFO)
@@ -32,7 +33,7 @@ class CalFire(object):
 
         fire_df = pd.concat(dfs)
 
-        filename = 'data/{}_calfire_data.csv'.format(DATE_STRING)
+        filename = 'data/{}_complete_calfire_data.csv'.format(DATE_STRING)
         fire_df.to_csv(filename, index=None)
 
     def _fetch_data(self, url):
@@ -52,7 +53,7 @@ class CalFire(object):
                 logging.info("Completed all pages")
                 break
 
-            # We scan by row, and the fetch data in each column of the row
+            # We scan by row, and then fetch data in each column of the row
             row_num = 2   # row_num 1 is the header
             while row_num:
                 try:
@@ -79,5 +80,19 @@ class CalFire(object):
 
 if __name__ == '__main__':
 
+    ap = argparse.ArgumentParser()
+    ap.add_argument("-a", "--all", required=False, help="get all fires")
+    ap.add_argument("-u", "--update", required=False, help="get only currently active fires")
+    ap.add_argument("-s", "--start_year", required=False, help="get fires starting from this year")
+    ap.add_argument("-e", "--end_year", required=False, help="get fires ending on this year")
+    args = vars(ap.parse_args())
+
     calfire = CalFire()
-    calfire.fetch_active_fires()
+    if args['update']:
+        calfire.fetch_active_fires()
+    elif args['start_year'] and args['end_year']:
+        calfire.fetch_all(int(args['start_year']), int(args['end_year']))
+    else:
+        logging.info("Fetching complete data starting from 2013 to current date.")
+        calfire.fetch_all(start_year=2013, end_year=datetime.today().year)
+
