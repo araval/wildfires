@@ -185,17 +185,41 @@ def process_dataframes(calfire, wikifire):
     all_fires['acres'] = all_fires.acres.apply(lambda x: int(re.sub(",", "", x)) if x != '' else 0)
     all_fires["area_SF"] = all_fires['acres']/SAN_FRANCISCO_LAND_AREA
 
-    return fire_df
+    return all_fires
 
+
+def get_latest_dataframe():
+
+    wiki_files = []
+    calfire_files = []
+
+    for filename in os.listdir('data/'):
+        if 'wiki' in filename:
+            wiki_files.append(filename)
+        else:
+            calfire_files.append(filename)
+
+    wiki_files = sorted(wiki_files)
+    logging.info("Using wiki file {}".format(wiki_files[-1]))
+    wiki_filename = os.path.join("data", wiki_files[-1]) 
+    wiki_df = pd.read_csv(wiki_filename)
+
+    calfire_files = sorted(calfire_files)
+    logging.info("Using calfire file {}".format(calfire_files[-1]))
+    calfire_filename = os.path.join("data", calfire_files[-1]) 
+    calfire_df = pd.read_csv(calfire_filename)
+
+    df = process_dataframes(calfire_df, wiki_df)
+
+    return df
 
 if __name__ == '__main__':
-    calfire = pd.read_csv("data/2020-08-26_calfire_data.csv")
-    wikifire = pd.read_csv("data/2020-08-27_wiki_calfire_data.csv")
-    fire_df = process_dataframes(calfire, wikifire)
 
     # All figures are saved in images/
     if not os.path.exists('images/'):
         os.mkdir('images')
+
+    fire_df = get_latest_dataframe()
 
     plot_annual_stats(fire_df)
     plot_monthly_stats(fire_df)
