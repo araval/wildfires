@@ -4,6 +4,7 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 from pandas.errors import OutOfBoundsDatetime
+from dateutil.parser._parser import ParserError
 
 import logging
 import sys
@@ -94,6 +95,8 @@ def get_end_date(row):
         date = pd.to_datetime(date_string)
     except OutOfBoundsDatetime:
         date = datetime.today().date()
+    except ParserError:
+        date = None
     return date
 
 
