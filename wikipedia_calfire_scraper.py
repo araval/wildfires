@@ -5,12 +5,19 @@ import requests
 from bs4 import BeautifulSoup
 from pandas.errors import OutOfBoundsDatetime
 
+import logging
+import sys
+
+log_format = '%(asctime)s|%(levelname)s| %(message)s'
+logging.basicConfig(stream=sys.stdout, format=log_format, level=logging.INFO)
+
 
 def get_dataframe(year):
     """
-    :param year: int. The year we want data for.
+    :param year (int): The year to fetch data for.
     :return: Pandas dataframe
     """
+    logging.info("Fetching year: {}".format(year))
     url = "https://en.wikipedia.org/wiki/{}_California_wildfires".format(year)
     html_page = requests.get(url).text
     parsed_page = BeautifulSoup(html_page, "html.parser")  
@@ -37,10 +44,16 @@ def get_dataframe(year):
 
 def get_correct_table(tables):
     """
-    Returns the correct table from various tables present in a wikipedia page based on header-content
+    Get correct table from various tables present in a wikipedia page based on header-content
 
-    :param tables: (list). List of tables
-    :return: table
+    Parameters
+    ----------
+    tables (list of xml table elements)
+
+    Returns
+    -------
+    table
+        The correct table that contains fire information.
     """
     for table in tables:
         for t in table.contents:
@@ -56,14 +69,6 @@ def get_correct_table(tables):
                 continue
             if len(header) > 1 and header[1] == 'County':
                 return header, table
-
-
-def get_fires(min_year, max_year):
-    fires = []
-    for year in range(min_year, max_year+1):
-        df = get_dataframe(year)
-        fires.append(df)
-    return clean_data(fires)
 
 
 def get_start_date(row):
@@ -95,7 +100,7 @@ def get_end_date(row):
 def clean_data(fires):
 
     """
-    This does the following:
+    This function does the following:
     1. Rename columns to remove naming inconsistencies
        "contained_date" is listed as "Contained Date", "Contained date", "Containment date" etc.
        "start_date" is listed as "Start Date", "Start date" etc.
@@ -103,6 +108,13 @@ def clean_data(fires):
     3. Format date strings. Some years have year included in date and some do not
     4. For active fires, set end-dates to today.
 
+    Parameters
+    ----------
+    fires (list): list of dataframes
+
+    Returns
+    -------
+    Single dataframe with cleaned data
     """
     # Collect names from all dfs
     column_names = []
@@ -129,6 +141,17 @@ def clean_data(fires):
      
     fires.columns = [colname.lower() for colname in fires.columns]
     return fires
+
+
+def get_fires(start_year, end_year):
+    """
+    Returns data from beginning of start_year to end of end_year or current date if end_year is current year
+    """
+    fires = []
+    for year in range(start_year, end_year+1):
+        df = get_dataframe(year)
+        fires.append(df)
+    return clean_data(fires)
 
 
 if __name__ == '__main__':
