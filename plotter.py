@@ -10,6 +10,12 @@ import os
 from datetime import datetime
 from counties import *
 
+import logging
+import sys
+
+log_format = '%(asctime)s|%(levelname)s| %(message)s'
+logging.basicConfig(stream=sys.stdout, format=log_format, level=logging.INFO)
+
 matplotlib.rcParams['font.family'] = "AppleGothic"
 sns.set(style='darkgrid', palette='muted')
 
@@ -20,12 +26,16 @@ SAN_FRANCISCO_LAND_AREA = 30022.4   # acres
 
 def plot_annual_stats(df):
     """
-    df: Pandas dataframe
-
     Plots number of fires by year
     Plots total area burned by year
-    Figures are saved in "images/<today>-annual-stats.png"
 
+    Parameters
+    ----------
+    df (Pandas dataframe): dataframe containing wildfire data.
+
+    Returns
+    -------
+    Figures are saved in "images/<today>-annual-stats.png".
     """
     df = df.groupby('year', as_index=False).agg({'area_SF': ['sum', 'max', 'count']})
     df.columns = ['year', 'total_area_burned_SF', 'biggest_fire_area_SF', 'num_fires']
@@ -47,13 +57,18 @@ def plot_annual_stats(df):
 
 def plot_monthly_stats(df):
     """
-    df: Pandas dataframe
-
     Plots number of fires by calendar month
     Plots total area burned by calendar month
-    Figures are saved in "images/<today>-monthly-stats.png"
 
+    Parameters
+    ----------
+    df (Pandas dataframe): dataframe containing wildfire data.
+
+    Returns
+    -------
+    Nothing. Figures are saved in "images/<today>-monthly-stats.png"
     """
+
     df['start_date'] = pd.to_datetime(df.start_date)
     df['month'] = df.start_date.apply(lambda x: x.month)
     monthly_df = df.groupby('month', as_index=False).agg({'acres': ['sum', 'count', 'max'],
@@ -76,9 +91,15 @@ def plot_monthly_stats(df):
 
 def plot_county_stats(df):
     """
-    df: Pandas dataframe
-
     Plots number of fires and area burned by county starting from 2002 until present
+
+    Parameters
+    ----------
+    df (Pandas dataframe): dataframe containing wildfire data.
+
+    Returns
+    -------
+    Nothing.
     Figures saved in images/<TODAY>-county-num-fires.png
     """
 
