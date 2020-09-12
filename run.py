@@ -91,6 +91,7 @@ if __name__ == '__main__':
 
     fire_df = get_latest_dataframe()
 
+    logging.info("Generating plots")
     plotter = Plotter()
     plotter.plot_annual_stats(fire_df)
     plotter.plot_monthly_stats(fire_df)
