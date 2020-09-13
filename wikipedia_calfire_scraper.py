@@ -8,6 +8,7 @@ from dateutil.parser._parser import ParserError
 
 import logging
 import sys
+import os
 
 log_format = '%(asctime)s|%(levelname)s| %(message)s'
 logging.basicConfig(stream=sys.stdout, format=log_format, level=logging.INFO)
@@ -178,21 +179,20 @@ def get_fires(start_year, end_year):
 
 def get_data():
 
+    wiki_filename = None
     for filename in os.listdir('data/'):
         if 'wiki' in filename:
-            wiki_files.append(filename)
+            wiki_filename = filename
 
-    if len(wiki_files) == 0:
+    if not wiki_filename:
         logging.info("No file with wikipedia data found. Fetching now.")
-        wiki_df = ws.get_fires(2002, 2013)
+        wiki_df = get_fires(2002, 2012)
     else:
-        wiki_files = sorted(wiki_files)
-        logging.info("Using wiki file {}".format(wiki_files[-1]))
-        wiki_filename = os.path.join("data", wiki_files[-1])
+        logging.info("Using wiki file {}".format(wiki_filename))
+        wiki_filename = os.path.join("data", wiki_filename)
         wiki_df = pd.read_csv(wiki_filename)
 
     return wiki_df
-
 
 if __name__ == '__main__':
     fire_df = get_fires(2002, 2020)
