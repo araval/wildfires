@@ -4,7 +4,8 @@ Visualizing Wildfire stats
 ### Annual Stats
 ![Annual Stats](https://github.com/araval/wildfires/blob/master/images/2020-09-12-annual-stats.png)
   
-### Monthly
+### Monthly Stats
+"month" is the month fire started. This plot is in direct conflict with what is reported as "fire season", i.e. months of October and November. Most fires seem to start in July and August.
 ![Monthly Stats](https://github.com/araval/wildfires/blob/master/images/2020-09-12-monthly-stats.png)
   
 ### Number of fires by County
