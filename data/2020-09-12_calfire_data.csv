@@ -1625,16 +1625,16 @@ York Fire,4/28/2019,Kings,161,100%,2019
 Girasol Fire,4/9/2019,Riverside,30,100%,2019
 Pilot Fire,1/1/2019,Humboldt,30,100%,2019
 Bullfrog Fire,9/12/2020,Fresno,,,2020
-Shackleford Fire,9/11/2020,Siskiyou,50,10%,2020
-Schoolhouse Fire,9/9/2020,Siskiyou,45,60%,2020
-Willow Fire,9/8/2020,Yuba,"1,311",40%,2020
+Shackleford Fire,9/11/2020,Siskiyou,50,20%,2020
+Schoolhouse Fire,9/9/2020,Siskiyou,45,70%,2020
+Willow Fire,9/9/2020,Yuba,"1,311",50%,2020
 Sperry Fire,9/8/2020,Stanislaus,45,,2020
 Fork Fire,9/8/2020,El Dorado,,,2020
 Slater Fire (includes Devil Fire),9/7/2020,Siskiyou,,,2020
-Oak Fire,9/7/2020,Mendocino,"1,100",50%,2020
+Oak Fire,9/7/2020,Mendocino,"1,100",75%,2020
 Bobcat Fire,9/6/2020,Los Angeles,"29,245",6%,2020
-Valley Fire,9/5/2020,San Diego,"17,665",69%,2020
-El Dorado Fire,9/5/2020,San Bernardino and Riverside,"14,043",39%,2020
+Valley Fire,9/5/2020,San Diego,"17,665",79%,2020
+El Dorado Fire,9/5/2020,San Bernardino and Riverside,"14,212",41%,2020
 Creek Fire,9/4/2020,Fresno and Madera,"196,667",6%,2020
 Rattlesnake Fire,9/3/2020,Tulare,,,2020
 Catholic Fire,9/1/2020,Lake,13,100%,2020
@@ -1656,9 +1656,10 @@ Moc Fire,8/20/2020,Tuolumne,"2,857",100%,2020
 Flint Fire,8/19/2020,Calaveras,55,100%,2020
 Dolan Fire,8/19/2020,Monterey,,,2020
 Butte/Tehama/Glenn Lightning Complex (Tehama/Glenn Zone),8/19/2020,Tehama and Glenn,"19,609",95%,2020
-North Complex Fire,8/18/2020,"Plumas, Butte and Yuba","252,313",21%,2020
+North Complex Fire,8/18/2020,Plumas and Butte,"258,496",22%,2020
 Creek Fire,8/18/2020,Mendocino,820,100%,2020
 Salt Fire,8/18/2020,Calaveras,"1,789",100%,2020
+SCU Lightning Complex,8/18/2020,"Santa Clara, Alameda, Contra Costa, San Joaquin and Stanislaus","396,624",98%,2020
 3-19 Fire,8/18/2020,Mendocino,62,100%,2020
 Woodward Fire,8/18/2020,Marin,,,2020
 Carmel Fire,8/18/2020,Monterey,"6,905",100%,2020
@@ -1666,16 +1667,15 @@ Bell Fire,8/18/2020,Tuolumne,,,2020
 Blue Jay Fire,8/18/2020,Mariposa,,,2020
 SHF Elkhorn Lightning Fires 2020,8/18/2020,"Trinity, Tehama and Humboldt",,,2020
 Red Salmon Complex,8/18/2020,Humboldt,,,2020
-SCU Lightning Complex,8/18/2020,"Santa Clara, Alameda, Contra Costa, San Joaquin and Stanislaus","396,624",98%,2020
 Murphy Fire,8/17/2020,El Dorado,14,100%,2020
 Holser Fire,8/17/2020,Ventura,"3,000",100%,2020
 4-8 Fire,8/17/2020,Glenn,275,100%,2020
+"LNU Lightning Complex (includes Hennessey, Gamble, 15-10, Spanish, Markley, 13-4, 11-16, Walbridge)",8/17/2020,"Napa, Sonoma, Lake, Yolo and Solano","363,220",96%,2020
 Beach Fire,8/17/2020,Mono,,,2020
 Jones Fire,8/16/2020,Nevada,705,100%,2020
-"LNU Lightning Complex (includes Hennessey, Gamble, 15-10, Spanish, Markley, 13-4, 11-16, Walbridge)",8/16/2020,"Napa, Sonoma, Lake, Yolo and Solano","363,220",95%,2020
-August Complex (includes Doe Fire),8/16/2020,Mendocino and Humboldt,"846,812",25%,2020
+August Complex (includes Doe Fire),8/16/2020,Mendocino and Humboldt,"875,059",25%,2020
 River Fire,8/16/2020,Monterey,"48,088",100%,2020
-CZU Lightning Complex (Including Warnella Fire),8/16/2020,Santa Cruz and San Mateo,"86,509",86%,2020
+CZU Lightning Complex (Including Warnella Fire),8/16/2020,Santa Cruz and San Mateo,"86,509",87%,2020
 Elk Fire,8/16/2020,Glenn,727,100%,2020
 3-2 Fire,8/16/2020,San Luis Obispo,20,100%,2020
 Hills Fire,8/15/2020,Fresno,"2,121",100%,2020

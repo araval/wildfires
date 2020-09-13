@@ -1,0 +1,450 @@
+name,county,acres,start_date,contained_date,notes,year
+Green,Riverside,"2,400",2002-02-09,2002-02-13,,2002
+Gavilan,San Diego,"5,763",2002-02-10,2002-02-15,"43 buildings destroyed, 13 buildings damaged",2002
+Nicholas,Madera,"12,000",2002-03-16,2002-03-16,,2002
+Aliso,San Diego,"2,400",2002-03-21,2002-03-22,,2002
+Bouquet,Los Angeles,"4,977",2002-05-11,2002-05-13,,2002
+Mateo,San Diego,"1,500",2002-05-13,2002-05-13,,2002
+State 925,Riverside,"1,472",2002-05-13,2002-05-15,,2002
+Ahlem,Merced,"6,000",2002-05-23,2002-05-23,,2002
+Arrowhead,San Bernardino,"2,688",2002-05-31,2002-06-05,,2002
+Wolf,Ventura,"21,645",2002-06-01,2002-06-14,,2002
+Copper,Los Angeles,"23,407",2002-06-05,2002-06-12,,2002
+Skyway,Butte,"2,000",2002-06-08,2002-06-09,,2002
+Davis,San Luis Obispo,"2,118",2002-06-09,2002-06-09,,2002
+Forks,Siskiyou,"1,400",2002-06-12,2002-06-15,,2002
+Bluecut,San Bernardino,"6,864",2002-06-16,2002-06-22,,2002
+Borel,Kern,"3,430",2002-06-15,2002-06-17,19 structures destroyed,2002
+Sudden Ranch,Santa Barbara,"7,782",2002-06-17,2002-06-19,1 structure destroyed,2002
+Copo,Los Angeles,"1,460",2002-06-18,2002-06-21,1 structures destroyed,2002
+Vieux,Alameda,"1,029",2002-06-18,2002-06-18,,2002
+Troy,San Diego,"1,188",2002-06-19,2002-06-22,"3 buildings destroyed, 1 damaged",2002
+Stage,Tulare,"1,100",2002-06-22,2002-06-22,,2002
+Louisiana,San Bernardino,"6,574",2002-06-26,2002-06-30,7 buildings destroyed,2002
+Cottonwood,Merced,"1,000",2002-07-04,2002-07-04,,2002
+596,Lassen,"4,500",2002-07-12,2002-07-13,,2002
+Garnet,San Diego,"1,166",2002-07-13,2002-07-16,,2002
+Mussolini,Siskiyou,"3,260",2002-07-13,2002-07-16,,2002
+Sour Biscuit,Del Norte,"28,772",2002-07-13,2002-08-02,,2002
+Inyo Complex,Inyo,"6,550",2002-07-15,2002-07-16,,2002
+Horse Complex,Lassen,"1,850",2002-07-15,2002-07-15,,2002
+Highway 58,San Luis Obispo,"1,380",2002-07-18,2002-07-19,6 structures destroyed,2002
+Deer,Kern,"1,800",2002-07-21,2002-07-24,94 structures destroyed,2002
+McNally,Tulare,"150,696",2002-07-21,2002-09-03,17 structures destroyed,2002
+Stanza,Siskiyou,"2,880",2002-07-26,2002-08-02,3 firefighters killed,2002
+Pines,San Diego,"61,690",2002-07-29,2002-08-16,"160 structures destroyed, 4 damaged; caused by damaged electric power lines",2002
+Fort Hunter Liggett,Monterey,"1,400",2002-08-10,2002-08-11,,2002
+Curve,Los Angeles,"20,857",2002-09-01,2002-09-05,73 structures destroyed,2002
+Freeway,Los Angeles,"1,043",2002-09-01,2002-09-03,,2002
+Leona,Los Angeles,"5,124",2002-09-03,2002-09-06,16 structures destroyed,2002
+Mountain,Los Angeles,594,2002-09-09,2002-09-11,,2002
+Oasis,Los Angeles,"1,305",2002-09-14,2002-09-14,,2002
+Sierra,Placer,"1,305",2002-09-18,2002-09-18,21 structures destroyed,2002
+Williams,Los Angeles,"38,094",2002-09-22,2002-10-07,77 structures destroyed,2002
+Croy,Santa Clara,"3,127",2002-09-23,2002-09-28,"34 structures destroyed, 4 damaged",2002
+Cone,Lassen,"2,006",2002-09-26,2002-09-30,,2002
+Sixteen,Yolo,"1,500",2002-10-01,2002-10-02,,2002
+Plum,El Dorado,"1,765",2002-11-26,2002-11-28,,2002
+Pine,Mendocino,"1,200",2002-11-26,2002-11-28,7 structures destroyed,2002
+Local,Riverside,"12,000",2003-02-23,2003-02-23,,2003
+Delima,Tulare,"3,000",2003-05-03,2003-05-03,,2003
+Bird,San Joaquin,"6,804",2003-06-01,2003-06-01,,2003
+Tejon,Kern,"1,155",2003-06-29,2003-06-02,2 structures destroyed,2003
+Parkhill,San Luis Obispo,"1,200",2003-07-20,2003-07-22,18 structures destroyed,2003
+Kibbie Complex,Tuolumne,"9,815",2003-07-20,2003-10-02,,2003
+Coyote,San Diego,"18,705",2003-07-16,2003-07-26,2 structures destroyed,2003
+Locust,Riverside,"1,898",2003-08-18,2003-08-20,1 structure destroyed,2003
+Canoe,Humboldt,"24,882",2003-09-03,2003-10-15,2 structures damaged,2003
+Pass,Riverside,"2,397",2003-10-21,2003-10-23,3 structures destroyed,2003
+Grand Prix,San Bernardino,"66,894",2003-10-21,2003-11-05,136 structures destroyed,2003
+Piru,Ventura,"63,991",2003-10-23,2003-11-14,8 structures destroyed,2003
+Verdale,Los Angeles,"8,650",2003-10-24,2003-10-24,1 structure destroyed,2003
+Simi,Ventura,"108,204",2003-10-25,2003-11-05,"300 structures destroyed, 21 injuries",2003
+Cedar,San Diego,"273,246",2003-10-25,2003-12-05,"2,820 structures destroyed, 15 fatalities",2003
+Old,San Bernardino,"91,281",2003-10-25,2003-11-14,"1,003 structures destroyed, 6 fatalities",2003
+Otay,San Diego,"46,291",2003-10-26,2003-10-27,"1 residential structure and 5 outbuildings destroyed, 1 firefighter injured[4]",2003
+Mine,San Diego,"46,000",2003-10-26,2003-10-28,,2003
+Mountain,Riverside,"10,000",2003-10-26,2003-10-29,61 structures destroyed,2003
+Paradise,San Diego,"56,700",2003-10-26,2003-11-06,"223 structures destroyed, 2 fatalities",2003
+Whitmore,Shasta,"1,200",2003-10-27,2003-10-30,,2003
+Pleasure Fire,Riverside,"2,464",2004-04-25,2004-04-26,,2004
+India,San Diego,"2,040",2004-05-02,2004-05-03,,2004
+Eagle,Riverside,"8,831",2004-05-02,2004-05-07,41 structures destroyed,2004
+Cerrito,Riverside,"16,460",2004-05-03,2004-05-07,26 structures destroyed,2004
+Cachuma,Santa Barbara,"1,127",2004-05-03,2004-05-07,1 structure destroyed,2004
+Cottonwood,Riverside,"1,845",2004-05-12,2004-05-15,,2004
+Gaviota,Santa Barbara,"7,440",2004-06-05,2004-06-11,4 structures destroyed,2004
+Meadow,Mariposa,"5,060",2004-06-27,2004-07-01,,2004
+Bluff,Shasta,"3,304",2004-06-28,2004-09-13,Burned in Lassen Volcanic National Park[4],2004
+Verbenia,Riverside,"3,833",2004-07-11,2004-07-16,,2004
+Gatos,Fresno,"1,307",2004-07-11,2004-07-13,,2004
+Pine,Los Angeles,"17,418",2004-07-12,2004-07-21,"15 structures destroyed, 1 firefighter fatality",2004
+Mataguary,San Diego,"8,649",2004-07-13,2004-07-15,3 structures destroyed,2004
+State Melton,Riverside,"3,667",2004-07-17,2004-07-20,20 structures destroyed,2004
+Foothill,Los Angeles,"6,002",2004-07-17,2004-07-21,,2004
+Pelican,Stanislaus,"1,500",2004-07-19,2004-07-24,,2004
+Crown Complex,Los Angeles,"18,026",2004-07-20,2004-07-23,7 structures destroyed,2004
+Straylor,Lassen,"3,422",2004-07-22,2004-07-29,,2004
+Irongate,Siskiyou,"2,400",2004-07-24,2004-07-26,,2004
+Sims,Trinity,"4,030",2004-07-28,2004-08-03,4 structures destroyed,2004
+East,Los Angeles,"1,330",2004-08-07,2004-08-09,,2004
+Copper,Calaveras,"3,443",2004-08-08,2004-08-09,,2004
+Kincaid,Santa Clara,"1,246",2004-08-08,2004-08-10,,2004
+Early,Tuolumne,"1,670",2004-08-09,2004-08-11,,2004
+Oregon,Butte,"2,030",2004-08-11,2004-08-15,4 structures destroyed,2004
+Bear,Shasta,"10,848",2004-08-11,2004-08-16,86 structures destroyed,2004
+Deep,Tulare,"3,148",2004-08-12,2004-08-16,,2004
+French,Shasta,"13,005",2004-08-14,2004-08-20,30 structures destroyed,2004
+Geysers,Lake,"12,525",2004-09-03,2004-09-08,21 structures destroyed,2004
+Pattison,Calaveras,"2,476",2004-09-03,2004-09-05,125 structures destroyed,2004
+Cement,Napa,"1,100",2004-09-04,2004-09-04,,2004
+Runaway,San Bernardino,"1,007",2004-09-07,2004-09-09,,2004
+Old Highway,Mariposa,"1,347",2004-09-12,2004-09-15,,2004
+Power,Amador,"16,800",2004-10-06,2004-10-21,,2004
+Rumsey,Yolo,"39,138",2004-10-10,2004-10-16,6 structures destroyed,2004
+Freds,El Dorado,"7,700",2004-10-13,2004-10-17,,2004
+Dos Amigos,Merced,"1,232",2005-06-03,2005-06-03,,2005
+Five,Fresno,"5,514",2005-06-04,2005-06-05,,2005
+Sperry,Stanislaus,"1,330",2005-06-04,2005-06-04,,2005
+Pioneer,San Bernardino,"1,876",2005-06-18,2005-06-19,,2005
+Paradise,San Bernardino,"3,082",2005-06-22,2005-06-25,,2005
+Soboba,Riverside,"2,000",2005-06-22,2005-06-24,,2005
+Hackberry,San Bernardino,"71,000",2005-06-22,2005-06-27,,2005
+Bailey,Madera,"1,056",2005-07-02,2005-07-02,,2005
+Tovey,Los Angeles,"1,200",2005-07-05,2005-07-06,,2005
+Millwood,Tulare,"2,600",2005-07-07,2005-07-07,,2005
+Nine,Tulare,"1,150",2005-07-09,2005-07-09,,2005
+Tesla,Alameda,"6,744",2005-07-19,2005-07-20,,2005
+China Lake,Kern,"1,282",2005-07-19,2005-07-19,,2005
+Kingston,San Bernardino,"3,500",2005-07-22,2005-07-23,,2005
+Cowpie,Merced,"3,200",2005-08-01,2005-08-01,,2005
+Halloran,San Bernardino,"1,500",2005-08-03,2005-08-03,1 civilian killed[2],2005
+Deer,Lake,"1,700",2005-08-09,2005-08-09,,2005
+ThirySix,Tehama,"2,700",2005-08-10,2005-08-11,,2005
+Barrel,Modoc,"24,800",2005-08-22,2005-08-22,,2005
+Harding,Sierra,"2,270",2005-08-24,2005-08-24,,2005
+Manton,Tehama,"1,830",2005-08-26,2005-08-29,,2005
+Blaisdell,Riverside,"5,493",2005-08-26,2005-08-30,,2005
+Gorman,Kern,"2,386",2005-09-03,2005-09-05,,2005
+Pine,Tulare,"1,600",2005-09-19,2005-09-19,,2005
+Topanga,San Bernardino,"24,175",2005-09-28,2005-10-07,,2005
+San Timoteo,Riverside,"1,100",2005-09-28,2005-09-28,,2005
+Harvard,Los Angeles,"1,094",2005-09-29,2005-10-04,,2005
+River,Madera,"6,000",2005-10-05,2005-10-05,,2005
+Border 50,San Diego,"4,103",2005-10-05,2005-10-08,,2005
+Woodhouse,Riverside,"6,500",2005-10-05,2005-10-07,,2005
+School,Ventura,"3,891",2005-11-18,2005-11-19,,2005
+Sierra,Riverside,"10,584",2006-02-06,2006-02-06,,2006
+Hotlum,Siskiyou,"3,019",2006-02-25,2006-02-27,4 structures destroyed,2006
+Torch,Fresno,"1,964",2006-05-13,2006-05-14,,2006
+Stuhr,Stanislaus,"1,418",2006-05-26,2006-05-26,,2006
+Alpaugh,Tulare,"1,700",2006-05-27,2006-05-27,,2006
+Perkins,Santa Barbara,"14,988",2006-06-19,2006-06-26,7 structures destroyed,2006
+Boulder Complex,Plumas,"3,500",2006-06-25,2006-07-05,2 structures destroyed,2006
+Observation Complex,Lassen,"4,300",2006-06-25,2006-06-30,,2006
+Goodale,Inyo,"3,750",2006-06-26,2006-06-29,,2006
+Yolla Bolly,Tehama,"1,247",2006-06-27,2006-06-27,,2006
+Del Puerto,Stanislaus,"2,590",2006-06-30,2006-07-03,,2006
+Pedro,Tuolumne,"2,000",2006-07-03,2006-07-05,,2006
+Pushwalla Complex,Riverside,"2,000",2006-07-07,2006-07-10,,2006
+Happy Complex,Modoc,"1,780",2006-07-09,2006-07-09,2 firefighter fatalities,2006
+Canyon,Stanislaus,"34,000",2006-07-09,2006-07-17,11 structures destroyed,2006
+Sawtooth Complex,San Bernardino,"62,000",2006-07-09,2006-07-20,"273 structures destroyed, 1 civilian fatality",2006
+Millard Fire Assist,Riverside,"24,210",2006-07-09,2006-07-09,,2006
+Beck,San Luis Obispo,"1,500",2006-07-11,2006-07-12,,2006
+Midway,Alameda,"6,400",2006-07-11,2006-07-11,,2006
+Creek,Lassen,"1,234",2006-07-18,2006-07-21,,2006
+Coytoe,Tulare,"1,325",2006-07-20,2006-07-21,,2006
+Olive,Merced,"25,007",2006-07-21,2006-07-21,,2006
+Ricco,Monterey,"14,506",2006-07-22,2006-07-27,,2006
+Three Rocks,Fresno,"8,400",2006-07-22,2006-07-22,,2006
+Horse,San Diego,"16,681",2006-07-23,2006-08-01,,2006
+Happy Camp,Siskiyou,"3,318",2006-07-23,2006-09-24,,2006
+Uncles Complex,Siskiyou,"30,454",2006-07-23,2006-10-31,1 structure destroyed,2006
+Oorleans Complex,Humboldt,"15,710",2006-07-24,2006-09-30,1 structure destroyed,2006
+Empire,Los Angeles,"1,094",2006-07-25,2006-07-25,,2006
+Hunter,Mendocino,"16,296",2006-07-26,2006-07-26,,2006
+Hoy,Siskiyou,"1,283",2006-07-26,2006-07-28,1 structure destroyed,2006
+Bar Complex,Trinity,"100,414",2006-07-27,2006-07-27,,2006
+Sage,Modoc,"4,855",2006-07-27,2006-08-05,,2006
+Junction,Trinity,"3,126",2006-07-29,2006-07-29,1 structure destroyed,2006
+Kingsley,Tehama,"6,854",2006-08-02,2006-08-02,,2006
+Cottonwood,Kern,"2,346",2006-08-05,2006-08-06,,2006
+Quail,Los Angeles,"4,864",2006-08-13,2006-08-16,2 structures destroyed,2006
+Pigeon,Trinity,"6,452",2006-09-02,2006-10-16,,2006
+Day,Ventura,"169,702",2006-09-04,2006-10-02,11 structures destroyed,2006
+Ralston,Placer,"8,423",2006-09-05,2006-09-18,2 structures destroyed,2006
+Sawmill,Mono,"7,434",2006-09-14,2006-09-15,2 structures destroyed,2006
+Orchard,Riverside,"1,580",2006-09-16,2006-09-16,,2006
+Ranch,Riverside,"1,670",2006-09-17,2006-09-17,,2006
+Pinnacles,San Bernardino,"2,370",2006-09-19,2006-09-21,,2006
+Bassetts,Sierra,"2,114",2006-09-19,2006-09-26,,2006
+Noble,Mendocino,"1,014",2006-09-24,2006-09-30,,2006
+Phelps,Fresno,"1,600",2006-10-25,2006-10-25,,2006
+Esperanza,Riverside,"40,200",2006-10-26,2006-10-31,"54 structures destroyed,5 firefighters and 1 civilian killed",2006
+Shekell,Ventura,"13,600",2006-12-03,2006-12-05,7 structures destroyed,2006
+Westside,Kern,"4,025",2006-12-07,2006-12-09,,2006
+241,Orange,"2,036",2007-03-11,2007-03-13,2 structures destroyed,2007
+Sierra,Riverside,"1,044",2007-03-11,2007-03-12,,2007
+Las Flores,San Bernardino,"4,100",2007-03-31,2007-04-01,1 structure destroyed,2007
+Golden,Inyo,"1,988",2007-04-14,2007-04-15,,2007
+James,Kern,"1,350",2007-04-29,2007-05-05,,2007
+Island,Los Angeles,"4,750",2007-05-10,2007-05-15,6 structures destroyed,2007
+Gorman,Los Angeles,"2,050",2007-05-19,2007-05-22,,2007
+Shannon,Tulare,"2,140",2007-06-03,2007-06-04,,2007
+Goldledge,Tulare,"4,196",2007-06-03,2007-06-28,,2007
+Inkopah,Imperial,"1,500",2007-06-05,2007-06-06,,2007
+Angora,El Dorado,"3,100",2007-06-24,2007-07-02,309 structures destroyed; cost at least $152.7 million in property damage and fire suppression,2007
+White,Kern,"12,454",2007-06-24,2007-07-03,31 structures destroyed,2007
+Mission,Monterey,"2,300",2007-06-28,2007-06-28,,2007
+Zaca,Santa Barbara,"240,207",2007-07-04,2007-09-04,1 structure destroyed,2007
+Antelope Complex,Plumas,"22,902",2007-07-05,2007-07-13,2 structures destroyed,2007
+Inyo Complex,Inyo,"35,176",2007-07-06,2007-07-16,33 structures destroyed,2007
+Rock 2,Tulare,"1,005",2007-07-06,2007-07-07,,2007
+Fletcher,Modoc,"8,121",2007-07-10,2007-07-19,11 structures destroyed,2007
+Elk Complex,Siskiyou,"17,684",2007-07-10,2007-09-15,1 firefighter fatality,2007
+China-Back Complex,Siskiyou,"2,906",2007-07-13,2007-07-21,,2007
+Bangor,Butte,"1,057",2007-08-07,2007-08-07,,2007
+Tar,Kings,"5,644",2007-08-10,2007-08-19,,2007
+Grouse,Tulare,"1,022",2007-08-27,2007-09-08,,2007
+Wallow,Trinity,"1,440",2007-08-29,2007-09-03,,2007
+North,Los Angeles,"2,200",2007-09-02,2007-09-08,,2007
+Lick,Santa Clara,"47,760",2007-09-03,2007-09-11,24 structures destroyed,2007
+Moonlight,Plumas,"64,997",2007-09-03,2007-09-15,21 structures destroyed,2007
+Pine,San Diego,"2,170",2007-09-12,2007-09-16,,2007
+Butler 2,San Bernardino,"14,039",2007-09-14,2007-10-01,3 structures destroyed,2007
+Ranch,Los Angeles,"58,401",2007-10-20,2007-10-30,10 structures destroyed,2007
+Canyon,Los Angeles,"4,521",2007-10-21,2007-10-27,8 structures destroyed,2007
+Sedgewick Fire,Santa Barbara,710,2007-10-21,2007-10-30,,2007
+Harris,San Diego,"90,440",2007-10-21,2007-11-05,"472 structures destroyed, 1 civilian fatality",2007
+Witch,San Diego,"197,990",2007-10-21,2007-11-06,"1,650 structures destroyed, 2 civilian fatalities",2007
+McCoy Fire[nb 1],San Diego,400,2007-10-21,2007-10-26,1 structure destroyed[32],2007
+Buckweed,Los Angeles,"38,356",2007-10-21,2007-11-01,63 structures destroyed,2007
+Santiago,Orange,"28,400",2007-10-21,2007-11-09,24 structures destroyed,2007
+Little Mountain Fire,San Bernardino,650,2007-10-22,2007-10-24,,2007
+Magic,Los Angeles,"2,824",2007-10-22,2007-10-27,,2007
+Slide,San Bernardino,"12,759",2007-10-22,2007-10-31,272 structures destroyed,2007
+Rice,San Diego,"9,472",2007-10-22,2007-11-01,248 structures destroyed,2007
+Grass Valley,San Bernardino,"1,247",2007-10-22,2007-10-29,178 structures destroyed,2007
+Meadowridge Fire,Los Angeles,"58,401",2007-10-23,2007-10-30,,2007
+Poomacha[nb 1],San Diego,"49,410",2007-10-23,2007-11-13,217 structures destroyed,2007
+Ammo (Horno) Fire,San Diego,"21,004",2007-10-23,2007-10-29,,2007
+Jack,Mariposa,"1,108",2007-10-29,2007-12-15,,2007
+Corral,Los Angeles,"4,901",2007-11-24,2007-11-27,86 structures destroyed,2007
+Wawona Nw,Mariposa,"1,130",2008-04-09,2008-04-19,,2008
+Honey Bee,Tulare,"1,225",2008-05-06,2008-05-23,,2008
+Colyear,Tehama,"1,331",2008-05-06,2008-05-09,,2008
+Avocado,Fresno,"1,100",2008-05-20,2008-05-21,,2008
+Summit,Santa Cruz,"4,270",2008-05-22,2008-05-27,,2008
+Clover,Tulare,"15,300",2008-05-28,2008-07-20,,2008
+Indians,Monterey,"81,378",2008-06-08,2008-07-10,,2008
+Jackson,Sacramento,"6,400",2008-06-10,2008-06-12,,2008
+Ophir,Butte,"1,600",2008-06-10,2008-06-13,,2008
+41,Madera,"3,300",2008-06-10,2008-06-11,,2008
+Lagrange,Tuolumne,"1,346",2008-06-10,2008-06-11,,2008
+Humboldt,Butte,"23,344",2008-06-11,2008-06-21,,2008
+Whiskey,Tehama,"7,783",2008-06-12,2008-06-22,,2008
+Albion River Lightning,Mendocino,"1,000",2008-06-20,2008-06-30,,2008
+Lime Complex,Trinity,"98,715",2008-06-20,2008-08-15,,2008
+Mad Complex,Trinity,"3,705",2008-06-20,2008-07-21,,2008
+Hells Half Complex,Trinity,"15,146",2008-06-20,2008-07-28,,2008
+South Complex,Humboldt,"29,327",2008-06-20,2008-09-15,,2008
+Brown Complex,San Benito,"3,870",2008-06-21,2008-06-24,,2008
+West Branch,Butte,"3,206",2008-06-21,2008-06-21,,2008
+Frey,Butte,"10,000",2008-06-21,2008-06-21,,2008
+Flea Valley,Butte,"1,248",2008-06-21,2008-06-21,,2008
+Flea Valley 2,Butte,"1,248",2008-06-21,2008-06-21,,2008
+Paradise,Humboldt,"1,076",2008-06-21,2008-08-01,,2008
+Blue 2 Complex,Siskiyou,"82,186",2008-06-20,,,2008
+Popcorn,Lassen,"3,000",2008-06-21,2008-06-22,,2008
+Cub Complex,Lassen,"19,718",2008-06-21,2008-07-20,,2008
+Peterson Complex,Lassen,"7,842",2008-06-21,2008-07-02,,2008
+Wild,Napa,"4,200",2008-06-21,2008-06-26,,2008
+Basin Complex,Monterey,"162,818",2008-06-21,2008-07-27,,2008
+Wagers Lightning,Mendocino,"3,000",2008-06-21,2008-06-21,,2008
+Jack Smith Lightning,Mendocino,"3,000",2008-06-21,2008-07-13,,2008
+Mallo B,Mendocino,"4,466",2008-06-21,2008-07-17,,2008
+Squaw 1 Lightning 2,Mendocino,"3,000",2008-06-21,2008-07-13,,2008
+Red Mountain 1,Mendocino,"7,515",2008-06-21,2008-08-01,,2008
+Gate Lightning,Mendocino,"3,000",2008-06-21,2008-07-13,,2008
+Soda Complex,Lake,"8,632",2008-06-21,2008-07-26,,2008
+Canyon Complex,Plumas,"47,680",2008-06-21,2008-09-30,,2008
+Iron Complex,Trinity,"105,805",2008-06-21,2008-09-09,,2008
+Sta 57 Ono Cdf Igo 2,Shasta,"4,000",2008-06-21,2008-07-24,,2008
+Whitmore Old Crow C2,Shasta,"2,054",2008-06-21,2008-07-15,,2008
+EO2A,Shasta,"1,200",2008-06-21,2008-07-06,,2008
+Stein,Shasta,"1,148",2008-06-21,2008-07-07,,2008
+Moon,Shasta,"6,030",2008-06-21,2008-08-09,,2008
+Platina 4,Trinity,"12,980",2008-06-21,2008-07-04,,2008
+Lewiston 8,Trinity,"1,311",2008-06-21,2008-07-23,,2008
+Lakehead,Shasta,"27,936",2008-06-21,2008-08-23,,2008
+Oliver,Mariposa,"2,200",2008-06-21,2008-06-26,,2008
+North Mountain,Tuolumne,"2,889",2008-06-21,2008-07-03,,2008
+American River Complex,Placer,"20,541",2008-06-21,2008-07-30,,2008
+Yuba River Complex,Sierra,"4,254",2008-06-21,2008-07-15,,2008
+Whiskeytown Complex,Shasta,"6,420",2008-06-21,2008-07-19,,2008
+Klamath Theater Complex,Siskiyou,"192,038",2008-06-21,2008-09-30,2 firefighters killed.[5],2008
+Popcorn,Lassen,"3,000",2008-06-22,2008-07-08,,2008
+Mill Complex,Tehama,"2,100",2008-06-22,2008-06-29,,2008
+Walker,Lake,"15,000",2008-06-22,2008-06-29,,2008
+Orr Springs Rd Ukv 2,Mendocino,"3,000",2008-06-22,2008-07-10,,2008
+5-8 Cliff Lightning,Mendocino,"1,000",2008-06-22,2008-07-13,,2008
+Venture,Shasta,"1,912",2008-06-22,2008-07-04,,2008
+Corral,Lassen,"12,500",2008-06-23,2008-07-07,,2008
+Oliver,Mariposa,"2,789",2008-06-23,2008-07-06,,2008
+Mill Creek,Tehama,"13,580",2008-06-24,2008-07-01,,2008
+Piute,Kern,"37,026",2008-06-28,2008-07-25,,2008
+Hardy,Mendocino,"5,581",2008-06-30,2008-06-30,,2008
+Gap,Santa Barbara,"9,443",2008-07-01,2008-07-28,,2008
+Butch Lightning,Mendocino,"2,800",2008-07-04,2008-07-04,,2008
+Lost Pipe Lightning,Mendocino,"1,200",2008-07-04,2008-07-10,,2008
+Jack Smith Lightning,Mendocino,"2,000",2008-07-04,2008-07-15,,2008
+Albion Lightning,Mendocino,"3,000",2008-07-04,2008-07-08,,2008
+Horse Lightning,Mendocino,"1,000",2008-07-04,2008-07-08,,2008
+Orr Series Lightning,Mendocino,"3,000",2008-07-04,2008-07-13,,2008
+Montgomery Flat Lightning,Mendocino,"3,000",2008-07-04,2008-07-15,,2008
+Alder Creek Beach,Mendocino,"1,000",2008-07-07,2008-07-07,,2008
+Tehipite,Fresno,"11,596",2008-07-19,2008-11-11,,2008
+Panther,Siskiyou,"72,344",2008-07-24,2008-09-30,,2008
+Telegraph,Mariposa,"34,091",2008-07-25,2008-09-15,,2008
+Rich,Plumas,"6,112",2008-07-29,2008-08-10,,2008
+Craig,Butte,"2,001",2008-08-03,2008-08-11,,2008
+Rim,Butte,"1,651",2008-08-13,2008-08-13,,2008
+Empire,Butte,"2,000",2008-08-13,2008-08-13,,2008
+Camp Beldon and Pit,Butte,"47,647",2008-07-08,2008-08-13,,2008
+Smokey,Butte,"1,324",2008-08-13,2008-08-13,,2008
+Jack,Siskiyou,"6,900",2008-08-17,2008-08-22,,2008
+Gladding,Placer,"1,000",2008-09-01,2008-09-03,,2008
+Gulch,Shasta,"2,847",2008-09-07,2008-09-11,,2008
+Hidden,Tulare,"3,668",2008-09-10,2008-09-30,,2008
+Chalk,Monterey,"16,269",2008-09-25,2008-10-29,,2008
+November,San Diego,"1,400",2008-10-08,2008-10-09,,2008
+Marek,Los Angeles,"4,824",2008-10-12,2008-10-16,,2008
+Sesnon,Los Angeles,"14,703",2008-10-13,2008-10-18,,2008
+Juliett,San Diego,"4,026",2008-10-13,2008-10-17,,2008
+Lackerman,Butte,"1,310",2008-10-23,2008-10-23,,2008
+Tea,Santa Barbara,"1,940",2008-11-13,2008-11-17,,2008
+Sayre,Los Angeles,"11,200",2008-11-14,2008-11-20,,2008
+Freeway Complex,Riverside,"30,305",2008-11-15,2008-11-22,,2008
+Jesusita,Santa Barbara,"8,733",2009-05-05,2009-05-20,160 structures destroyed,2009
+Grouse,Mariposa,"3,047",2009-05-30,2009-07-13,,2009
+Harden,Tuolumne,"1,661",2009-06-08,2009-07-11,,2009
+Explosive,San Joaquin,"2,163",2009-06-19,2009-06-19,,2009
+Lion Complex,Tulare,"3,988",2009-06-30,2009-08-21,,2009
+Backbone,Trinity,"6,324",2009-07-01,2009-07-24,1 fatality,2009
+Yankee,San Diego,"2,200",2009-07-11,2009-07-14,,2009
+Fork,Inyo,"3,268",2009-07-18,2009-07-27,,2009
+Tennant,Siskiyou,"3,225",2009-07-19,2009-07-27,,2009
+Knight,Tuolumne,"6,130",2009-07-26,2009-08-11,,2009
+Wildcat,Tuolumne,"1,100",2009-07-29,2009-08-31,,2009
+Hat Creek Complex,Shasta,"11,269",2009-08-01,2009-08-12,,2009
+W-4,Lassen,"1,500",2009-08-01,2009-08-07,,2009
+Dodge Complex,Lassen,"1,600",2009-08-01,2009-08-03,,2009
+Brown,Shasta,"1,000",2009-08-02,2009-08-12,,2009
+Fairfield,Shasta,"1,664",2009-08-02,2009-08-21,,2009
+Chalk (Shu Complex),Shasta,"6,895",2009-08-03,2009-08-16,,2009
+Goose (Shu Complex),Shasta,"3,918",2009-08-03,2009-08-17,,2009
+Cassel (Shu Complex),Shasta,"6,319",2009-08-03,2009-08-14,,2009
+La Brea,Santa Barbara,"89,489",2009-08-08,2009-08-23,2 buildings destroyed,2009
+Lockheed,Santa Cruz,"7,817",2009-08-12,2009-08-23,13 structures destroyed,2009
+Coffin,Trinity,"1,300",2009-08-12,2009-08-15,,2009
+Corral,San Joaquin,"12,200",2009-08-13,2009-08-16,,2009
+Yuba,Yuba,"3,891",2009-08-14,2009-08-24,,2009
+Red Rock,Siskiyou,"1,364",2009-08-21,2009-09-04,,2009
+Morris,Los Angeles,"2,168",2009-08-25,2009-09-03,,2009
+Bryson,Monterey,"3,383",2009-08-25,2009-08-29,,2009
+Station,Los Angeles,"160,577",2009-08-26,2009-10-16,"209 Structures destroyed, 2 firefighters killed.",2009
+Big Meadows,Mariposa,"7,425",2009-08-26,2009-09-10,,2009
+Gloria,Monterey,"6,437",2009-08-27,2009-09-01,,2009
+Cottonwood,Riverside,"2,409",2009-08-27,2009-08-31,,2009
+Pacheco,Santa Clara,"1,600",2009-08-29,2009-08-30,,2009
+Oak Glen III,San Bernardino,"1,159",2009-08-30,2009-09-08,,2009
+Oasis,Lake,"1,500",2009-09-07,2009-09-12,,2009
+Guiberson,Ventura,"17,500",2009-09-22,2009-10-01,1 building destroyed,2009
+Six,Yolo,"1,235",2009-10-01,2009-10-01,,2009
+Sheep,San Bernardino,"7,128",2009-10-03,2009-10-10,,2009
+Mill Creek #4,Humboldt,"2,750",2009-10-07,2009-10-17,,2009
+Cotton,San Luis Obispo,"2,044",2010-05-15,2010-05-17,,2010
+McKinley,Riverside,"1,000",2010-05-20,2010-05-22,,2010
+Robinson,Merced,"1,600",2010-06-11,2010-06-12,,2010
+Aliso,San Diego,"3,225",2010-07-13,2010-07-13,,2010
+Sand 2,Kern,"1,254",2010-07-16,2010-07-22,,2010
+Indian,Kern,"1,822",2010-07-18,2010-07-24,,2010
+Mono,Mono,"1,205",2010-07-26,2010-07-29,,2010
+Bull,Kern,"16,442",2010-07-26,2010-08-10,14 Structures destroyed,2010
+McDonald,Lassen,"9,408",2010-07-27,2010-08-10,,2010
+West,Kern,"1,650",2010-07-27,2010-08-06,50 structures destroyed,2010
+Crown,Los Angeles,"13,918",2010-07-29,2010-08-03,10 structures destroyed,2010
+Bar,Plumas,"1,040",2010-07-31,2010-08-10,,2010
+Pozo,San Luis Obispo,"1,200",2010-08-21,2010-08-22,,2010
+Post,Kern,"1,312",2010-08-25,2010-08-28,,2010
+Bullard,Yuba,"1,307",2010-08-27,2010-08-31,,2010
+Bullards,Nevada,"1,500",2010-08-27,2010-09-13,,2010
+Canyon,Kern,"9,820",2010-09-12,2010-09-19,1 structure destroyed,2010
+Cove,Kern,"1,122",2011-05-27,2011-05-31,,2011
+Cougar,Modoc,"2,000",2011-06-08,2011-06-13,,2011
+Antelope,Kern,"5,200",2011-06-19,2011-06-21,2 structures destroyed,2011
+Quinn,Kern,"3,154",2011-06-21,2011-06-22,,2011
+Stage,Tulare,"1,213",2011-06-27,2011-07-02,,2011
+Lion,Tulare,"20,500",2011-07-08,2011-10-10,,2011
+Scorpion Complex,Modoc,"2,945",2011-07-15,2011-07-18,,2011
+Eagle,San Diego,"14,100",2011-07-21,2011-07-29,,2011
+Annie,Modoc,"2,076",2011-08-18,2011-08-21,,2011
+Motor,Mariposa,"5,231",2011-08-25,2011-09-04,,2011
+Wells,San Bernardino,"1,723",2011-08-28,2011-08-31,,2011
+Hill,San Bernardino,"1,135",2011-09-02,2011-09-02,3 structures destroyed,2011
+Soda,San Luis Obispo,"1,528",2011-09-03,2011-09-04,1 structures destroyed,2011
+Canyon,Kern,"14,585",2011-09-04,2011-09-11,100 structures destroyed,2011
+Milton,San Joaquin,"1,122",2011-09-09,2011-09-11,,2011
+Keene Complex,Kern,"2,577",2011-09-10,2011-09-14,,2011
+Comanche Complex,Kern,"29,338",2011-09-10,2011-09-14,Originated as 4 separate fires.[4],2011
+Breckenridge Complex,Kern,"25,213",2011-09-10,2011-09-17,,2011
+John,Inyo,"5,300",2011-09-13,2011-09-16,,2011
+Tamarack,Mariposa,"1,011",2011-09-13,2011-10-17,,2011
+65 Fire,Kern,"2,005",2011-09-23,2011-09-23,,2011
+Ruth,Trinity,"1,460",2011-09-23,2011-09-28,31 structures destroyed,2011
+Buckeye,Mono,"1,140",2011-09-25,2011-09-27,,2011
+Great,San Diego,"2,135",2011-10-01,2011-10-07,,2011
+Banner,San Diego,"5,320",2012-05-24,2012-05-29,,2012
+George,Tulare,"1,707",2012-06-01,2012-06-15,,2012
+Gaines,Mariposa,"1,700",2012-06-12,2012-06-14,,2012
+Highland,Riverside,"2,171",2012-06-16,2012-06-18,,2012
+Cascade,Mariposa,"1,705",2012-06-16,2012-11-26,,2012
+Dale,Shasta,"1,083",2012-07-05,2012-07-07,2 structures destroyed,2012
+Fish,Inyo,"1,103",2012-07-07,2012-07-09,,2012
+Mill,Colusa,"29,502",2012-07-07,2012-07-18,5 structures destroyed,2012
+Grapevine,Colusa,"1,870",2012-07-08,2012-07-12,,2012
+Rail,Colusa,"1,870",2012-07-09,2012-07-12,,2012
+Turkey,Monterey,"2,529",2012-07-09,2012-07-20,,2012
+Robbers,Placer,"2,650",2012-07-11,2012-07-21,8 structures destroyed,2012
+Flat,Trinity,"1,688",2012-07-11,2012-07-17,,2012
+Sand,Kern,"1,428",2012-07-14,,1 structure destroyed,2012
+Spanish,Lassen,"1,169",2012-07-18,2012-07-21,,2012
+Reading,Shasta,"28,079",2012-07-23,2012-08-21,,2012
+Chips,Plumas,"75,217",2012-07-29,2012-08-31,9 structures destroyed,2012
+Rushmore,Riverside,"1,000",2012-08-04,2012-08-04,,2012
+Piute Comlex,Kern,"1,783",2012-08-04,2012-08-11,,2012
+Lake Complex,Modoc,"1,668",2012-08-05,2012-08-09,,2012
+Fort Complex,Siskiyou,"23,653",2012-08-05,2012-09-10,,2012
+Barry Point,Modoc,"38,394",2012-08-06,2012-08-28,3 structures destroyed,2012
+Indian,Mono,"12,574",2012-08-08,2012-08-15,,2012
+Chihuahua,San Diego,"2,006",2012-08-09,2012-08-12,,2012
+Jawbone Complex,Kern,"1,218",2012-08-10,2012-08-22,19 structures destroyed,2012
+Ramsey,Calaveras,"1,137",2012-08-11,2012-08-31,,2012
+Wye,Lake,"2,934",2012-08-12,2012-08-18,3 structures destroyed,2012
+Walker,Lake,"5,000",2012-08-12,2012-08-14,,2012
+Rush,Lassen,"271,911",2012-08-12,2012-08-31,,2012
+Vallecito Lightning Complex,San Diego,"22,829",2012-08-13,2012-08-20,,2012
+Mill,Tehama,"1,641",2012-08-13,2012-08-23,,2012
+Buck,Riverside,"2,681",2012-08-14,2012-08-18,4 structures destroyed,2012
+Nelson,Modoc,"3,661",2012-08-17,2012-08-21,,2012
+Ponderosa,Tehama,"27,676",2012-08-18,2012-09-02,133 structures destroyed,2012
+Bagley Complex,Shasta,"1,000",2012-08-18,2012-08-22,,2012
+North Pass,Mendocino,"41,983",2012-08-18,2012-09-16,26 structures destroyed,2012
+Bagley,Shasta,"46,011",2012-08-18,2012-09-15,,2012
+Williams,Los Angeles,"4,192",2012-09-02,2012-09-11,,2012
+Sixteen Complex,Colusa,"19,000",2012-09-04,2012-09-11,,2012
+Stafford,Trinity,"4,407",2012-09-05,2012-09-13,,2012
+Likely,Lassen,"9,838",2012-09-05,2012-09-14,,2012
+Scotts,Lake,"4,517",2012-09-07,2012-09-14,,2012
+Shockey,San Diego,"2,555",2012-09-23,2012-09-27,39 structures destroyed,2012
