@@ -18,26 +18,68 @@ class CalFire(object):
         path_to_chromedriver = os.path.join(os.pardir, "chromedriver")
         self.driver = webdriver.Chrome(path_to_chromedriver)
 
+    def get_data(self):
+        """
+        Read data from disk if file available, else fetch from web.
+
+        Returns
+        -------
+        Dataframe with fire data.
+        """
+
+        calfire_filename = None
+        for filename in os.listdir('data/'):
+            if 'wiki' not in filename:
+                calfire_filename = filename
+
+        if not calfire_filename:
+            logging.info("No file with Cal Fire data found locally. Fetching now.")
+            df = self.fetch(2013, 2020)
+        else:
+            logging.info("Using Calfire file {}".format(calfire_filename))
+            df = pd.read_csv(calfire_filename)
+
+            file_date = calfire_filename.split("_")[0]
+            file_date = pd.to_datetime(file_date)
+
+            data_age = (datetime.today() - file_date).days
+
+            if data_age < 10:
+                return df
+
+            if data_age < 30:
+                logging.info("Local file is more than 10 days old. Updating with current active fires")
+                active_fires = self.fetch_active_fires()
+                df.loc[df.name.isin(active_fires.name), :] = active_fires
+            else:
+                logging.info("Local file is more than a month old. Updating file")
+                current_year = datetime.today().year
+                fires = self.fetch(current_year, current_year)
+                df = pd.concat([df[df.year < current_year], fires])
+
+            os.remove(calfire_filename)
+
+        filename = 'data/{}_calfire_data.csv'.format(DATE_STRING)
+        df.to_csv(filename, index=None)
+        return df
+
     def fetch_active_fires(self):
         url = 'https://www.fire.ca.gov/incidents/'
         df = self._fetch_data(url)
-        filename = 'data/{}_calfire_active_fires.csv'.format(DATE_STRING)
-        df.to_csv(filename, index=None)
         self.driver.quit()
+        return df
 
     def fetch(self, start_year, end_year):
         dfs = []
         for year in range(start_year, end_year+1):
             url = 'https://www.fire.ca.gov/incidents/{}/'.format(year)
-            logging.info("Fetching calfire data for year {}".format(year))
+            logging.info("Fetching Calfire data for year {}".format(year))
             df = self._fetch_data(url)
             df['year'] = year
             dfs.append(df)
 
         fire_df = pd.concat(dfs)
 
-        filename = 'data/{}_calfire_data_{}-{}.csv'.format(DATE_STRING, start_year, end_year)
-        fire_df.to_csv(filename, index=None)
         self.driver.quit()
         return fire_df
 
@@ -100,4 +142,3 @@ if __name__ == '__main__':
         logging.info("Fetching complete data starting from {} to {}.".format(start_year, end_year))
 
         calfire.fetch(start_year, end_year)
-

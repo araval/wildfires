@@ -15,8 +15,15 @@ logging.basicConfig(stream=sys.stdout, format=log_format, level=logging.INFO)
 
 def get_dataframe(year):
     """
-    :param year (int): The year to fetch data for.
-    :return: Pandas dataframe
+    Scrapes data from Wikipedia page for <year>
+
+    Parameters
+    ----------
+    year (int): The year to fetch data for.
+
+    Returns
+    -------
+    Pandas dataframe with wildfire data
     """
     logging.info("Fetching year: {}".format(year))
     url = "https://en.wikipedia.org/wiki/{}_California_wildfires".format(year)
@@ -74,9 +81,12 @@ def get_correct_table(tables):
 
 def get_start_date(row):
     """
+    Helper function for function 'clean_data' below.
     Some years include year in their dates "5th August, 2020"
     Other years do not, as in "5th August", considering the year is obvious from the page
     we are looking at.
+
+    row: A row from a Pandas dataframe
     """
     day = row['start_date'].split(",")[0]
     date_string = '{}, {}'.format(day, row['year'])
@@ -85,9 +95,12 @@ def get_start_date(row):
 
 def get_end_date(row):
     """
+    Helper function for function 'clean_data' below.
     Similar issues as start_date (see function get_start_date)
     In addition, a fire can be active, in which case contained date is null. We will use
     today's date as 'contained_date'
+
+    row: A row from a Pandas dataframe
     """
     day = row['contained_date'].split(",")[0]
     date_string = '{}, {}'.format(day, row['year'])
@@ -148,13 +161,37 @@ def clean_data(fires):
 
 def get_fires(start_year, end_year):
     """
-    Returns data from beginning of start_year to end of end_year or current date if end_year is current year
+    Parameters
+    ----------
+    start_year, end_year (ints)
+    Get data from <start_year> to <end_year> inclusive.
+
+    Returns
+    -------
+    Pandas Dataframe
     """
     fires = []
     for year in range(start_year, end_year+1):
         df = get_dataframe(year)
         fires.append(df)
     return clean_data(fires)
+
+def get_data():
+
+    for filename in os.listdir('data/'):
+        if 'wiki' in filename:
+            wiki_files.append(filename)
+
+    if len(wiki_files) == 0:
+        logging.info("No file with wikipedia data found. Fetching now.")
+        wiki_df = ws.get_fires(2002, 2013)
+    else:
+        wiki_files = sorted(wiki_files)
+        logging.info("Using wiki file {}".format(wiki_files[-1]))
+        wiki_filename = os.path.join("data", wiki_files[-1])
+        wiki_df = pd.read_csv(wiki_filename)
+
+    return wiki_df
 
 
 if __name__ == '__main__':
