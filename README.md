@@ -9,3 +9,9 @@ Visualizing Wildfire stats
 ![Number of fires by County](https://github.com/araval/wildfires/blob/master/images/2020-09-12-county-num-fires.png)
 
 ![Fire area by County](https://github.com/araval/wildfires/blob/master/images/2020-09-12-county-fire-area.png)
+
+
+### Usage
+
+- ```$python run.py``` 
+This script will download data (saved to ```data/```) and generate plots (saved to ```images/```). 
