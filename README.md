@@ -1,5 +1,4 @@
 # California Wildfires
-Visualizing Wildfire stats
   
 ### Annual Stats
 ![Annual Stats](https://github.com/araval/wildfires/blob/master/images/2020-09-12-annual-stats.png)
