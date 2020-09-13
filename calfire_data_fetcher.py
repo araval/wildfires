@@ -15,8 +15,8 @@ DATE_STRING = datetime.today().strftime(format='%Y-%m-%d')
 
 class CalFire(object):
     def __init__(self):
-        path_to_chromedriver = os.path.join(os.pardir, "chromedriver")
-        self.driver = webdriver.Chrome(path_to_chromedriver)
+        self.path_to_chromedriver = os.path.join(os.pardir, "chromedriver")
+
 
     def get_data(self):
         """
@@ -37,12 +37,12 @@ class CalFire(object):
             df = self.fetch(2013, 2020)
         else:
             logging.info("Using Calfire file {}".format(calfire_filename))
-            df = pd.read_csv(calfire_filename)
-
             file_date = calfire_filename.split("_")[0]
             file_date = pd.to_datetime(file_date)
-
             data_age = (datetime.today() - file_date).days
+
+            calfire_filename = os.path.join('data', calfire_filename)
+            df = pd.read_csv(calfire_filename)
 
             if data_age < 10:
                 return df
@@ -64,34 +64,35 @@ class CalFire(object):
         return df
 
     def fetch_active_fires(self):
+        driver = webdriver.Chrome(self.path_to_chromedriver)
         url = 'https://www.fire.ca.gov/incidents/'
-        df = self._fetch_data(url)
-        self.driver.quit()
+        df = self._fetch_data(url, driver)
+        driver.quit()
         return df
 
     def fetch(self, start_year, end_year):
+        driver = webdriver.Chrome(self.path_to_chromedriver)
         dfs = []
         for year in range(start_year, end_year+1):
             url = 'https://www.fire.ca.gov/incidents/{}/'.format(year)
             logging.info("Fetching Calfire data for year {}".format(year))
-            df = self._fetch_data(url)
+            df = self._fetch_data(url, driver)
             df['year'] = year
             dfs.append(df)
 
         fire_df = pd.concat(dfs)
-
-        self.driver.quit()
+        driver.quit()
         return fire_df
 
-    def _fetch_data(self, url):
-        self.driver.get(url)
+    def _fetch_data(self, url, driver):
+        driver.get(url)
         xpath_base_string = '//*[@id="incidentListTable"]/div/div/'
         fires = []
         page_number = 1
         while page_number:
             try:
                 xpath_to_page_button = '//*[@id="incidentListTable"]/div/nav/ul/li[{}]/a'.format(page_number)
-                page_button = self.driver.find_element_by_xpath(xpath_to_page_button)
+                page_button = driver.find_element_by_xpath(xpath_to_page_button)
                 page_button.click()
             except NoSuchElementException as e:
                 logging.debug(e)
@@ -106,7 +107,7 @@ class CalFire(object):
                     for col_num in range(1, 6):
                         # col_num = 1 - 5 corresponds to name, date, county, acres, containment
                         xpath_to_element = '{}div[{}]/div[{}]'.format(xpath_base_string, row_num, col_num)
-                        element = self.driver.find_element_by_xpath(xpath_to_element)
+                        element = driver.find_element_by_xpath(xpath_to_element)
                         element = element.text
                         res.append(element)
                     fires.append(res)
