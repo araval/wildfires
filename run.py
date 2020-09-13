@@ -1,7 +1,7 @@
 import pandas as pd
 from plotter import Plotter
-import wikipedia_calfire_scraper as wf
 from calfire_data_fetcher import CalFire
+from wikipedia_calfire_scraper import WikiFire
 import sys
 import re
 import os
@@ -26,11 +26,12 @@ def get_combined_dataframe():
 
     Returns
     -------
-    Dataframe with all data from 2002 - present
+    Dataframe with all wildfire data from 2002 - present
     """
 
     cf = CalFire()
     calfire = cf.get_data()
+    wf = WikiFire()
     wikifire = wf.get_data()
 
     # Rename column, and add empty columns to concatenate with older wiki data
