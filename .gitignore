@@ -1,2 +1,4 @@
 *.ipynb
 scratch
+.idea/
+__pycache__/
