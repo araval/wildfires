@@ -17,7 +17,6 @@ class CalFire(object):
     def __init__(self):
         self.path_to_chromedriver = os.path.join(os.pardir, "chromedriver")
 
-
     def get_data(self):
         """
         Read data from disk if file available, else fetch from web.
@@ -64,6 +63,11 @@ class CalFire(object):
         return df
 
     def fetch_active_fires(self):
+        """
+        Returns
+        -------
+        Pandas dataframe with currently active fires
+        """
         driver = webdriver.Chrome(self.path_to_chromedriver)
         url = 'https://www.fire.ca.gov/incidents/'
         df = self._fetch_data(url, driver)
@@ -71,6 +75,18 @@ class CalFire(object):
         return df
 
     def fetch(self, start_year, end_year):
+        """
+        Fetch all fires from start_year through end_year
+
+        Parameters
+        ----------
+        start_year (int)
+        end_year (int)
+
+        Returns
+        -------
+        Pandas dataframe
+        """
         driver = webdriver.Chrome(self.path_to_chromedriver)
         dfs = []
         for year in range(start_year, end_year+1):
@@ -85,6 +101,17 @@ class CalFire(object):
         return fire_df
 
     def _fetch_data(self, url, driver):
+        """
+        Function to fetch data using xpaths
+        Parameters
+        ----------
+        url (string)
+        driver (chromedriver instance)
+
+        Returns
+        -------
+        Pandas dataframe with data scraped from the given calfire url
+        """
         driver.get(url)
         xpath_base_string = '//*[@id="incidentListTable"]/div/div/'
         fires = []
