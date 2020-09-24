@@ -45,13 +45,8 @@ class CalFire(object):
 
             if data_age < 10:
                 return df
-
-            if data_age < 30:
-                logging.info("Local file is more than 10 days old. Updating with current active fires")
-                active_fires = self.fetch_active_fires()
-                df.loc[df.name.isin(active_fires.name), :] = active_fires
             else:
-                logging.info("Local file is more than a month old. Updating file")
+                logging.info("Local file is more than 10 days old. Updating fires")
                 current_year = datetime.today().year
                 fires = self.fetch(current_year, current_year)
                 df = pd.concat([df[df.year < current_year], fires])
