@@ -15,6 +15,8 @@ Units in y-axis for area is "number of San Franciscos". So the largest fire in 2
 This excludes multi-county fires, as the total area burned is very, very large.
 ![Fire area by County](https://github.com/araval/wildfires/blob/master/images/2020-09-12-county-fire-area.png)
 
+### Twenty largest fires
+![largest fires](https://github.com/araval/wildfires/blob/master/images/2020-09-14-largest_fires.png)
 
 ### Usage
 
